@@ -1,0 +1,15 @@
+//fonsts
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400,500,700');
+
+$firago: 'FiraGO', sans-serif;
+
+//colors
+$primary: black;
+$bg-color: white;
+
+//layout
+@mixin content-max-width {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}

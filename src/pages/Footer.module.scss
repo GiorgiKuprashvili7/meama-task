@@ -1,0 +1,39 @@
+@use '../styles/variables' as *;
+
+.footer {
+  @include content-max-width;
+  padding: 0 25px;
+  background-color: $bg-color;
+}
+
+.content {
+  border-top: 1px solid rgba(112, 112, 112, 0.1);
+  width: 100%;
+  padding: 28px 0;
+}
+
+.links {
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tel {
+  font-family: $firago;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: $primary;
+  height: 24px;
+}
+.socialLinks {
+  display: flex;
+  gap: 17px;
+}
+
+.title {
+  font-family: $firago;
+  font-size: 14px;
+  color: $primary;
+  filter: opacity(0.5);
+}

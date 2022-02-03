@@ -1,0 +1,131 @@
+@use '../styles/variables' as *;
+
+.section {
+  @include content-max-width;
+  background-color: $bg-color;
+  padding-left: 25px;
+  min-height: 100vh;
+}
+.header {
+  height: 63px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.backBtn {
+  height: 35px;
+  width: 35px;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.descriptionBox {
+  font-family: $firago;
+  color: $primary;
+  .name,
+  .price {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .name {
+    padding-top: 33px;
+    margin-bottom: 5px;
+  }
+  .price {
+    margin-bottom: 30px;
+  }
+
+  .specBox {
+    margin-bottom: 35px;
+    .specName {
+      filter: opacity(50%);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .specValue {
+      font-size: 18px;
+    }
+  }
+
+  .selectCoffeeBox {
+    cursor: pointer;
+    transition-duration: 200ms;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+    .selectCoffee {
+      background-color: #f3f3f3;
+      width: 49px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+
+      img {
+        width: 25px;
+      }
+    }
+    .selectCoffee.active {
+      transform: scale(1.05);
+      transition-duration: 200ms;
+      background-color: #ff5753;
+      img {
+        transition-duration: 200ms;
+        transform: translateY(-8px) scale(1.2);
+      }
+    }
+  }
+}
+
+.imageBox {
+  overflow: hidden;
+  position: relative;
+  height: 240px;
+  width: 100%;
+  padding-right: 30px;
+  .bg {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 0 0 50%;
+  }
+  img {
+    z-index: 2;
+    position: relative;
+    height: 100%;
+  }
+}
+
+.descriptionTitle {
+  font-family: $firago;
+  filter: opacity(50%);
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  margin-right: 25px;
+}
+.description {
+  max-width: 300px;
+  margin-right: 25px;
+}
+.description * {
+  font-family: $firago;
+  line-height: 21px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 360px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

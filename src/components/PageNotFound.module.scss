@@ -1,0 +1,32 @@
+@use '../styles/variables' as *;
+
+.content {
+  @include content-max-width;
+  background-color: $bg-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $firago;
+  h1 {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 44px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 38px;
+  }
+  a {
+    text-decoration: none;
+    color: $bg-color;
+    font-size: 14px;
+    line-height: 50px;
+    width: 221px;
+    text-align: center;
+    background-color: $primary;
+    border-radius: 25px;
+  }
+}

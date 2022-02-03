@@ -1,0 +1,63 @@
+@use '../styles/variables' as *;
+
+.section {
+  @include content-max-width;
+  background-color: $bg-color;
+  padding-left: 25px;
+  padding-bottom: 50px;
+}
+.title {
+  font-size: 28px;
+  font-family: $firago;
+  font-weight: normal;
+  color: $primary;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.carouselItem {
+  text-decoration: none;
+  color: $primary;
+  padding-right: 13px;
+}
+
+.itemContent {
+  width: 139;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carouselImg {
+  width: 115px;
+  height: 155px;
+  object-fit: contain;
+}
+
+.name,
+.price {
+  text-align: center;
+  text-decoration: none;
+  font-family: $firago;
+  color: $primary;
+}
+.name {
+  font-size: 16px;
+}
+.price {
+  font-weight: bold;
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  right: 0;
+}
+
+.bg {
+  height: 265px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 8px;
+}
